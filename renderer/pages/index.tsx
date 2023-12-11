@@ -80,10 +80,8 @@ const Home = () => {
   // * EFFECTS
   // SET CONFIG VARIABLES ON FIRST RUN
   useEffect(() => {
-    // UPSCAYL VERSION
-    const upscaylVersion = navigator?.userAgent?.match(
-      /Upscayl\/([\d\.]+\d+)/
-    )[1];
+    const upscaylVersionMatch = navigator?.userAgent?.match(/Upscayl\/([\d\.]+\d+)/);
+    const upscaylVersion = upscaylVersionMatch ? upscaylVersionMatch[1] : 'unknown';
     setVersion(upscaylVersion);
   }, []);
 

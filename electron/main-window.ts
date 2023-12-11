@@ -36,6 +36,7 @@ const createMainWindow = () => {
       });
 
   mainWindow.loadURL(url);
+  console.log("Hyungseok Test start: " + url)
 
   mainWindow.webContents.setWindowOpenHandler(({ url }) => {
     shell.openExternal(url);

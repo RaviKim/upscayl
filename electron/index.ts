@@ -39,7 +39,11 @@ app.on("ready", async () => {
   createMainWindow();
 
   if (!electronIsDev) {
+    log.info("🚀 UPSCAYL is Production");
     autoUpdater.checkForUpdates();
+  }
+  else{
+    log.info("🚀 UPSCAYL is Dev");
   }
 
   log.info("🚀 UPSCAYL EXEC PATH: ", execPath("bin"));
